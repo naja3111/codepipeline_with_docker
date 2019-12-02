@@ -2,7 +2,7 @@
     "AWSTemplateFormatVersion": "2010-09-09",
     "Parameters": {
         "projectUrl": {
-            "Description": "Git project URL. (https://github.com/seis665/assignment-9-code-pipeline-naja3111.git)",
+            "Description": "Git project URL. (https://github.com/naja3111/codepipeline_with_docker.git)",
             "Type": "String"
         },
         "webami": {
@@ -22,7 +22,7 @@
         },
         "GitHubUsername": {
             "Type": "String",
-            "Default": "seis665"
+            "Default": "naja3111"
         },
         "GitHubAccessToken": {
             "Type": "String",
@@ -36,7 +36,7 @@
         "GitHubRepositoryName": {
             "Description": "GitHub repository name",
             "Type": "String",
-            "Default": "assignment-9-code-pipeline-naja3111"
+            "Default": "codepipeline_with_docker"
         },
         "KeyName": {
             "Description": "Name of your EC2 KeyPair to enable SSH access to the instances.",
