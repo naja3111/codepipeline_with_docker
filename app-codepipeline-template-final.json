@@ -452,7 +452,8 @@
                             }
                         }],
                     "ImagePullCredentialsType": "CODEBUILD",
-                    "Type": "LINUX_CONTAINER"
+                    "Type": "LINUX_CONTAINER",
+                    "PrivilegedMode": true
                 },
                 "ServiceRole": { "Fn::GetAtt": [ "AppBuildRole", "Arn" ] },
                 "Source": {
