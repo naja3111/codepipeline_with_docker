@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /opt/python-app
+hooks:
+  AfterInstall:
+    - location: 
+      timeout: 180
+      runas: root
+  ApplicationStart:
+    - location: /app
+      timeout: 90
+      runas: root
