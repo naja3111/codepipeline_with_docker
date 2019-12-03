@@ -364,7 +364,27 @@
                     {
                         "Ref": "WebserverSG"
                     }
-                ]
+                ],
+                "UserData": {
+                    "Fn::Base64": {
+                        "Fn::Join": [
+                            "",
+                            [
+                                "#!/bin/bash -xe\n",
+                                "apt-get update -y\n",
+                                "apt-get install ruby -y\n",
+                                "apt-get install wget -y\n",
+                                "mkdir /opt/python-app\n",
+                                "cd /home/ubuntu\n",
+                                "wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install\n",
+                                "chmod +x ./install\n",
+                                "sudo ./install auto\n",
+                                "service codedeploy-agent start\n",
+                                "rm install\n"
+                            ]
+                        ]
+                    }
+                }
             }
         },
         "WebInstanceRole": {
